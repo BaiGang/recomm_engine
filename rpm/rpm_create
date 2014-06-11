@@ -1,0 +1,125 @@
+#!/bin/sh
+
+TOP_DIR=".rpm_create"
+CRON_DIR="/etc/cron.d"
+DFT_PREFIX="/usr/local"
+DFT_RELEASE=2
+DFT_VERSION=1.0.0
+
+LANG=C
+export LANG
+
+usage()
+{
+  echo "Usage:"
+  echo "  rpm_create -p <\$PREFIX> -v <version number> -r <release number> -t <target> -k"
+  echo "Default prefix is: /usr/local"
+  echo "Default version number is: 0.0.1"
+  echo "Default release number is: 1"
+  echo "Default target is: 'uname -p', and target maybe: i686-redhat-linux"
+  echo "-k: keep the dir of arch"
+  exit 0
+}
+
+svn_path="Unknown_path"
+svn_revision="Unknown_revision"
+svn_info()
+{
+  str=`svn info 2>/dev/null |
+  awk -F': ' '{if($1=="URL") print $2}'`
+
+  if [ -z "$str" ]; then return; fi
+
+  svn_path=$str
+  str=`svn info $svn_path 2>/dev/null |
+  awk -F': ' '{if($1=="Last Changed Rev") print $2}'`
+
+  if [ -z "$str" ]; then
+    echo "!! Please upgrade your subversion: sudo yum install subversion"
+    return;
+  fi
+
+  svn_revision=$str
+}
+
+prefix=${PREFIX:-${DFT_PREFIX}}
+release=${RELEASE:-${DFT_RELEASE}}
+version=${VERSION:-${DFT_VERSION}}
+
+TEMP=`getopt -o p:v:r:t:hk -- "$@"`
+eval set -- "$TEMP"
+
+keep=0
+while true ; do
+  case "$1" in
+    -k) keep=1; shift ;;
+    -h) usage; shift ;;
+    -p) prefix=$2; shift 2 ;;
+    -v) version=$2; shift 2 ;;
+    -r) release=$2; shift 2 ;;
+    -t) target=$2; shift 2 ;;
+    --) shift; break;;
+    *) echo "Internal error!"; exit 1;;
+  esac
+done
+
+
+RPM_MACROS=$HOME/.rpmmacros
+if [ -e $RPM_MACROS ]; then
+  mv -f $RPM_MACROS $RPM_MACROS.bak
+fi
+
+svn_info
+
+echo "%_topdir $TOP_DIR" > $RPM_MACROS
+echo "%_prefix $prefix" >> $RPM_MACROS
+echo "%_svn_path $svn_path" >> $RPM_MACROS
+echo "%_svn_revision $svn_revision" >> $RPM_MACROS
+echo "%_version $version" >> $RPM_MACROS
+echo "%_release $release" >> $RPM_MACROS
+echo "%_crondir $CRON_DIR" >> $RPM_MACROS
+echo "%_crontab ./$CRON_DIR/%{name}" >> $RPM_MACROS
+# Disable the checking of missing package files
+# For detail: http://www.oldrpm.org/hintskinks/unpackaged/
+echo "%_unpackaged_files_terminate_build 0" >> $RPM_MACROS
+if [ -n "$target" ]; then
+  echo $target | grep "64" 2>&1 >/dev/null
+  if [ $? -ne 0 ]; then
+    echo "%_lib lib" >> $RPM_MACROS
+  fi
+fi
+
+BUILD_DIR=$TOP_DIR/BUILD
+ROOT=$BUILD_DIR/$prefix
+
+if [ $# -gt 0 ]; then
+  specs=$@
+else
+  specs=`ls *.spec 2>/dev/null`
+fi
+
+if [ -n "$target" ]; then
+  target="--target $target"
+fi
+
+for i in $specs; do
+#trap "rm -rf $TOP_DIR" 0
+  rm -rf $TOP_DIR
+  mkdir -p $TOP_DIR/RPMS
+  mkdir -p $ROOT
+  mkdir -p $BUILD_DIR/$CRON_DIR
+
+  BUILD_ROOT=`pwd`/$BUILD_DIR
+
+  VERSION=$version RELEASE=$release rpmbuild -bb $target --buildroot $BUILD_ROOT $i
+  if [ $keep -eq 0 ];then
+    find $TOP_DIR/RPMS -name "*.rpm"  -exec mv {} . \;
+  else
+    cp -rf $TOP_DIR/RPMS/* .
+  fi
+done
+
+rm -rf $TOP_DIR $RPM_MACROS
+if [ -e $RPM_MACROS.bak ]; then
+  mv -f $RPM_MACROS.bak $RPM_MACROS
+fi

@@ -1,0 +1,562 @@
+10.209.89.7 - - [04/Nov/2013 10:03:14] "GET /?did=003450bdd24d66581681df34a01fbec86c16242c HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:03:14] "GET /favicon.ico HTTP/1.1" 200 -
+10.221.15.171 - - [04/Nov/2013 10:03:22] "GET /?did=003450bdd24d66581681df34a01fbec86c16242c HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:04:04] "GET /?callback=getUserRecommInfoOnline&did=00340f94b7965d87995ba3f6fda45b741e57d767&_=1383530600006 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:04:49] "GET /?callback=getUserRecommInfoOnline&did=00340f94b7965d87995ba3f6fda45b741e57d767&_=1383530685075 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:06:11] "GET /?did=00340f94b7965d87995ba3f6fda45b741e57d767 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:06:12] "GET /favicon.ico HTTP/1.1" 200 -
+136838
+serving with  9999
+para_index= 1
+did=003450bdd24d66581681df34a01fbec86c16242c
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+did=003450bdd24d66581681df34a01fbec86c16242c
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=00340f94b7965d87995ba3f6fda45b741e57d767
+_=1383530600006
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=71054c3e87f00b390d600fdcc1f3e822&type=did&id=00340f94b7965d87995ba3f6fda45b741e57d767&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":""}
+{u'msg': u'succ', u'data': u'', u'retcode': 20000000}
+get history url  http://10.79.96.44:9999?did=00340f94b7965d87995ba3f6fda45b741e57d767
+error when reading redis, expected string or buffer
+para_index= 1
+callback=getUserRecommInfoOnline
+did=00340f94b7965d87995ba3f6fda45b741e57d767
+_=1383530685075
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=71054c3e87f00b390d600fdcc1f3e822&type=did&id=00340f94b7965d87995ba3f6fda45b741e57d767&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":""}
+{u'msg': u'succ', u'data': u'', u'retcode': 20000000}
+get history url  http://10.79.96.44:9999?did=00340f94b7965d87995ba3f6fda45b741e57d767
+error when reading redis, expected string or buffer
+para_index= 1
+did=00340f94b7965d87995ba3f6fda45b741e57d767
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=71054c3e87f00b390d600fdcc1f3e822&type=did&id=00340f94b7965d87995ba3f6fda45b741e57d767&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":""}
+{u'msg': u'succ', u'data': u'', u'retcode': 20000000}
+get history url  http://10.79.96.44:9999?did=00340f94b7965d87995ba3f6fda45b741e57d767
+error when reading redis, expected string or buffer
+para_index= 1
+did=003450bdd24d66581681df34a01fbec86c16242c
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'messa10.209.89.7 - - [04/Nov/2013 10:06:21] "GET /?did=003450bdd24d66581681df34a01fbec86c16242c HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:06:21] "GET /favicon.ico HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:06:35] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530685076 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:06:40] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530797621 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:07:32] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530849441 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:07:53] "GET /?callback=getUserRecommInfoOnline&did=data.users.weibo_insterests&_=1383530870508 HTTP/1.1" 200 -
+ge': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530685076
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530797621
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530849441
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=data.users.weibo_insterests
+_=1383530870508
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=92f160bd197a71bd1a4d38c498fba5d5&type=did&id=data.users.weibo_insterests&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":""}
+{u'msg': u'succ', u'data': u'', u'retcode': 20000000}
+get history url  http://10.79.96.44:9999?did=data.users.weibo_insterests
+error when reading redis, expected string or buffer
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530870509
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"suc10.209.89.7 - - [04/Nov/2013 10:08:15] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530870509 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:08:32] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530902413 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:08:46] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530902414 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:09:01] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530902415 HTTP/1.1" 200 -
+c","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530902413
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530902414
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530902415
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530902416
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg10.209.89.7 - - [04/Nov/2013 10:10:58] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530902416 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:11:05] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383530902417 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:11:20] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531072050 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:12:00] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531105402 HTTP/1.1" 200 -
+': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383530902417
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531072050
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531105402
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531203226
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]10.209.89.7 - - [04/Nov/2013 10:13:25] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531203226 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:14:02] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531240292 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:14:39] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531276032 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:17:15] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531432852 HTTP/1.1" 200 -
+}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531240292
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531276032
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531432852
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531786242
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.js10.209.89.7 - - [04/Nov/2013 10:23:10] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531786242 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:26:29] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531978062 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:26:42] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383531999571 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:27:02] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532015409 HTTP/1.1" 200 -
+on?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531978062
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383531999571
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532015409
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532046662
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u410.209.89.7 - - [04/Nov/2013 10:27:29] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532046662 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:28:02] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532079329 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:28:13] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532090010 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:28:28] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532105687 HTTP/1.1" 200 -
+e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532079329
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532090010
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532105687
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532125565
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e10.209.89.7 - - [04/Nov/2013 10:28:47] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532125565 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:29:04] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532141312 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:29:20] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532158335 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:29:32] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532170283 HTTP/1.1" 200 -
+50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532141312
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532158335
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532170283
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532216041
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd2410.209.89.7 - - [04/Nov/2013 10:30:18] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532216041 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:30:56] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532254435 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:31:08] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532266535 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:31:37] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532295046 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:33:19] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532396748 HTTP/1.1" 200 -
+d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532254435
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532266535
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532295046
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532396748
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a0110.209.89.7 - - [04/Nov/2013 10:33:48] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532418201 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:33:50] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532418202 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:34:13] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532449546 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 10:34:24] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532462009 HTTP/1.1" 200 -
+fbec86c16242c
+_=1383532418201
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532418202
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532449546
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532462009
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532535724
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=210.209.89.7 - - [04/Nov/2013 10:35:38] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532535724 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 12:39:47] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383532535725 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 12:40:09] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383540005314 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 13:13:32] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383542000963 HTTP/1.1" 200 -
+2b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383532535725
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383540005314
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383542000963
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"retcode":20000000,"msg":"succ","data":{"003450bdd24d66581681df34a01fbec86c16242c":{"3480722620":"{\"snc\":[\"2013-08-27\",3]}"}}}
+{u'msg': u'succ', u'data': {u'003450bdd24d66581681df34a01fbec86c16242c': {u'3480722620': u'{"snc":["2013-08-27",3]}'}}, u'retcode': 20000000}
+succ
+interest url: http://api.ds.weibo.com/1/user_feature/get_common_by_names.json?uid=3480722620&feature_names=main_interest
+{u'message': u'success', u'data': [{u'main_interest': u'IT-\u4e92\u8054\u7f51-\u4ea7\u54c1:22;\u6f14\u827a\u5a31\u4e50-\u660e\u661f:21;\u6f14\u827a\u5a31\u4e50-\u97f3\u4e50-\u6d41\u884c\u4e50:21', u'uid': u'3480722620'}]}
+get history url  http://10.79.96.44:9999?did=003450bdd24d66581681df34a01fbec86c16242c
+para_index= 1
+callback=getUserRecommInfoOnline
+did=003450bdd24d66581681df34a01fbec86c16242c
+_=1383546317812
+request url: http://ilogin.sina.com.cn/api/deviceid/info?entry=adrecommend&m=22b012b473fc35a6808ab4dfe7dd1971&type=did&id=003450bdd24d66581681df34a01fbec86c16242c&extra=1
+ret json: {"ret10.209.89.7 - - [04/Nov/2013 14:29:58] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383546317812 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 14:30:55] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383546651119 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 14:33:38] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383546815165 HTTP/1.1" 200 -
+10.209.89.7 - - [04/Nov/2013 14:36:00] "GET /?callback=getUserRecommInfoOnline&did=003450bdd24d66581681df34a01fbec86c16242c&_=1383546955975 HTTP/1.1" 200 -
