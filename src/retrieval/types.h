@@ -4,7 +4,7 @@
 
 #ifndef  SRC_RETRIEVAL_TYPES_H_
 #define  SRC_RETRIEVAL_TYPES_H_
-#include <stdio.h>
+#include <cstdint>
 #include <vector>
 
 namespace recomm_engine {

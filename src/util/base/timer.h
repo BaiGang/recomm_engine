@@ -6,6 +6,7 @@
 #define _UTIL_BASE_TIMER_H_
 #include <sys/time.h>
 #include <time.h>
+#include <cstdint>
 #include <string>
 namespace util {
 class Timer {

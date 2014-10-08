@@ -26,7 +26,7 @@ IDL_SRCS = idl/gen-cpp/FacebookService.cpp \
 IDL_OBJECTS = $(IDL_SRCS:.cpp=.o)
 
 CFLAGS += -I./ -I./include -I./src -I./idl/gen-cpp/ -Wall $(OPT) -pthread -fPIC 
-CXXFLAGS += -I. -I./include -I./src -I./idl/gen-cpp/ -DHAVE_NETINET_IN_H -Wall $(OPT) -pthread -fPIC 
+CXXFLAGS += -I. -I./include -I./src -I./idl/gen-cpp/ -DHAVE_NETINET_IN_H -Wall -std=c++0x $(OPT) -pthread -fPIC 
              
 LDFLAGS += -rdynamic -L./lib -L/usr/local/lib
 LIBS += -lpthread -ldl -lgflags -lglog -lleveldb -lthrift -lcityhash \
