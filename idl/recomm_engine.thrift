@@ -35,7 +35,9 @@ enum RecommendationResponseCode {
 struct RecommendationResult {
   1: required string story_id;
   2: required double score = 100.0;
-  3: optional string debug_info;
+  3: required string url;
+  4: required string title;
+  5: optional string debug_info;
 }
 
 struct RecommendationResponse {
@@ -59,9 +61,11 @@ enum StoryManagementStatus {
 
 struct StoryProfile {
   1: required string story_id;
-  2: required map<i64, i32> keywords;
-  3: optional list<i32> topics;
-  4: required i64 signature;  // used in dedup.
+  2: required i64 signature;  // used in dedup.
+  3: required string url;
+  4: required string title;
+  5: required map<i64, i32> keywords;
+  6: optional list<i32> topics;
 }
 
 struct StoryAddingRequest {
