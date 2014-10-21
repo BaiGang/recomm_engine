@@ -64,8 +64,17 @@ struct StoryProfile {
   2: required i64 signature;  // used in dedup.
   3: required string url;
   4: required string title;
-  5: required map<i64, i32> keywords;
+  5: required map<i64, i32> keywords;  // keyword : weight
   6: optional list<i32> topics;
+  7: optional map<i32, double> topic_vector;
+  8: optional string description;
+  9: optional string tag;
+  10: optional map<string, double> category;
+  11: optional string profile;
+  12: optional string extra;
+  13: optional string content;
+  14: optional map<i64, double> title_seg;
+  15: optional map<i64, double> content_seg;
 }
 
 struct StoryAddingRequest {
