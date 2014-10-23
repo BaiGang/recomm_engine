@@ -10,7 +10,7 @@ include "fb303.thrift"
 
 namespace cpp recomm_engine.idl
 namespace java com.sina.recomm.engine.idl
-namespace perl Recomm
+namespace perl RecommEngine
 
 
 /*******************************************************************/
@@ -99,7 +99,8 @@ struct UserProfile {
   1: required string uid;
   2: required map<i64, i32> keywords;
   3: optional list<i32> topics;
-  4: required list<i64> history;
+  4: optional list<i64> history;
+  5: optional StoryProfile story_profile;
 }
 
 enum UserEngagementType {
@@ -160,3 +161,5 @@ struct RetrievalResponse {
 service RetrievalEngine {
   RetrievalResponse search(1: RetrievalRequest request);
 }
+
+
