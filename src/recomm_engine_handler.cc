@@ -39,33 +39,20 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
 
   // 1. FETCH USER PROFILE DATA ACCORDINGLY
   idl::UserProfile user_profile;
-  int ret = user_profile_storage_->GetUserProfile(request.uid, 
-                                             &user_profile);
-  VLOG(10) << "Fetching user profile for [" << request.uid << "], ret [" << ret << "]";
-  // 2. CHECK USER PROFILE AVAILABILITY
-  //   TRUE if UserProfile exists AND UserProfile.keywords exists
-  // 3.1  if ups not available, get the hottest and most local docs
-  // FIXME(baigang): Use a specified method to check if the user profile is valid.
-  if (ret != 0 || user_profile.keywords.empty() ) {
-    // case when user profile is not available
-    //FIXME(baigang):Get hot results.
-    LOG(WARNING) << "User profile does not exist. uid=" << request.uid;
+
+  /// XXX(baigang): Temporally using story profile instead of user profile
+  idl::StoryProfile user_story_profile;
+  if (!StoryProfileStorage::GetInstance()->GetProfile(CityHash64(request.uid.data(), request.uid.length()),
+                                                      &user_story_profile)) {
+    LOG(WARNING) << "DOC not existed for [" << request.uid << "]";
     _return.response_code = idl::RRC_UID_NOT_FOUND;
     return;
   }
- 
+  user_profile.uid = request.uid;
+  user_profile.keywords = user_story_profile.keywords;
+  user_profile.story_profile = user_story_profile;
+  
   VLOG(30) << "UID is: <" << user_profile.uid << ">";
-  VLOG(30) << "User keywords are: ";
-  for (std::map<int64_t, int32_t>::const_iterator it = user_profile.keywords.begin();
-       it != user_profile.keywords.end(); ++it) {
-    VLOG(30) << "Keyword <" << it->first << ">, weight <" << it->second << ">";
-  }
-  VLOG(30) << "User history list:";
-  for (std::vector<int64_t>::const_iterator it = user_profile.history.begin();
-       it != user_profile.history.end(); ++it) {
-    VLOG(30) << "Article hash code <" << *it << ">"; 
-  }
- 
 
   // 3.2  if available then iterate over docs and calculate proximity scores
   // TODO(sijia,baigang): Use the map structure rather than copy each item...
