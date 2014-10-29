@@ -12,6 +12,8 @@ Ranker::~Ranker() {
 
 double Ranker::compute_rank(RankerDoc* doc) {
   double score = 0.0;
+  // the number of the keywords hit
+  score = doc->key_info.size() * 1.0;  
   return score;
 }
 
