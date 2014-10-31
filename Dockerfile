@@ -22,6 +22,7 @@ RUN mkdir -p /home/sina/include \
     && mkdir -p /home/sina/bin \
     && mkdir -p /home/sina/lib64 \
     && mkdir -p /home/sina/conf \
+    && mkdir -p /home/sina/share/recomm_plugins \
     && mkdir -p /home/sina/log
 
 ADD server.app /home/sina/bin/recomm_server
