@@ -23,7 +23,7 @@ RUN mkdir -p /home/sina/include \
     && mkdir -p /home/sina/lib64 \
     && mkdir -p /home/sina/conf \
     && mkdir -p /home/sina/share/recomm_plugins \
-    && mkdir -p /home/sina/log
+    && mkdir -p /home/sina/log/indexing_replay_log 
 
 ADD server.app /home/sina/bin/recomm_server
 ADD conf/recomm_plugin.conf /home/sina/conf/recomm_plugin.conf
