@@ -37,20 +37,19 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
   // Initialize the response as invalid.
   _return.response_code = idl::RRC_ERROR;
 
-  // 1. FETCH USER PROFILE DATA ACCORDINGLY
+  // 1. FETCH USER/STORY PROFILE DATA ACCORDINGLY
   idl::UserProfile user_profile;
+  idl::StoryProfile story_profile;
 
-  /// XXX(baigang): Temporally using story profile instead of user profile
-  idl::StoryProfile user_story_profile;
-  if (!StoryProfileStorage::GetInstance()->GetProfile(CityHash64(request.uid.data(), request.uid.length()),
-                                                      &user_story_profile)) {
-    LOG(WARNING) << "DOC not existed for [" << request.uid << "]";
-    _return.response_code = idl::RRC_UID_NOT_FOUND;
+  if (!user_profile_storage_->GetUserProfile(request.uid, &user_profile)) {
+    LOG(WARNING) << "USER not existed for [" << request.uid << "]";
+  }
+
+  if (!StoryProfileStorage::GetInstance()->GetProfile(CityHash64(request.url.data(), request.url.length()),
+                                                      &story_profile)) {
+    LOG(WARNING) << "DOC not existed for [" << request.url << "]";
     return;
   }
-  user_profile.uid = request.uid;
-  user_profile.keywords = user_story_profile.keywords;
-  user_profile.story_profile = user_story_profile;
   
   VLOG(30) << "UID is: <" << user_profile.uid << ">";
 
@@ -65,11 +64,21 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
     info.weight = it->second;
     retrieval_request.keywords.push_back(info);
   }
+  for (std::map<int64_t, int32_t>::const_iterator it =
+          story_profile.keywords.begin();
+       it != story_profile.keywords.end(); ++it) {
+    idl::RetrievalRequestInfo info;
+    info.keyword = it->first;
+    info.weight = it->second;
+    retrieval_request.keywords.push_back(info);
+  }
+
   idl::RetrievalResponse retrieval_response;
   retrieval_handler_->retrieve(retrieval_request, &retrieval_response);
 
   if (retrieval_response.resp_code != idl::STATE_OK) {
-    LOG(WARNING) << "Retrieval failed. uid=" << request.uid;
+    LOG(WARNING) << "Retrieval failed. uid=" << request.uid
+        << ", url=" << request.url;
     //TODO(baigang): return hot/local news.
     _return.response_code = idl::RRC_NO_DOC;
     return;
@@ -107,6 +116,7 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
   // 4. Do ranking, using the algo plugin
   boost::shared_ptr<IAlgoPlugin> ranking_plugin = AlgoPluginManager::GetInstance()->Select(user_profile.uid);
   int num_results = ranking_plugin->Rank(user_profile,
+                                         story_profile,
                                          candidates,
                                          &_return.results,
                                          false);

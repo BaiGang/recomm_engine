@@ -21,6 +21,7 @@ class IAlgoPlugin {
    * All algo logics are opaque in the implementations. Logging, error handling are encapsulated.
   */
   virtual int Rank(const idl::UserProfile& user_profile,
+                   const idl::StoryProfile& story_profile,
                    const std::vector<idl::StoryProfile>& candidates,
                    std::vector<idl::RecommendationResult>* results,
                    bool use_debug = false) = 0;

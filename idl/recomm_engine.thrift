@@ -18,8 +18,10 @@ namespace perl RecommEngine
 /*******************************************************************/
 struct RecommendationRequest {
   1: required string uid;
-  2: required string ip;
+  2: required string url;
   3: required i16 topN;
+  4: optional string ip;
+  // TODO: specify channels/buckets
 }
 
 enum RecommendationResponseCode {
