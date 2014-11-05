@@ -102,7 +102,7 @@ struct UserProfile {
   2: required map<i64, i32> keywords;
   3: optional list<i32> topics;
   4: optional list<i64> history;
-  5: optional StoryProfile story_profile;
+  5: optional StoryProfile OBSOLETE_story_profile;
 }
 
 enum UserEngagementType {
