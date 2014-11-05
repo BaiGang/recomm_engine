@@ -53,6 +53,7 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
   
   VLOG(30) << "UID is: <" << user_profile.uid << ">";
 
+
   // 3.2  if available then iterate over docs and calculate proximity scores
   // TODO(sijia,baigang): Use the map structure rather than copy each item...
   idl::RetrievalRequest retrieval_request;
@@ -86,13 +87,16 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
   
   boost::unordered_set<int64_t> existence;
   std::vector<idl::StoryProfile> candidates;
+//  LOG(INFO) << "RETRIVAL RESULT: [";
   for(std::vector<idl::RetrievalResult>::const_iterator iter =
       retrieval_response.results.begin();
       iter != retrieval_response.results.end(); ++iter) {
+  //  LOG(INFO) << "RETRIVAL story_id = " << iter->story_id;
     if (user_profile.history.end() != std::find(user_profile.history.begin(),
                                                 user_profile.history.end(),
                                                 iter->story_id)) {
       VLOG(20) << "Skip story <" << iter->story_id << "> due to existence in history.";
+  //    LOG(INFO) << "Skip story <" << iter->story_id << "> due to existence in history.";
       continue;
     }
     idl::StoryProfile story_profile;
@@ -103,11 +107,15 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
 
     if (existence.end() != existence.find(story_profile.signature)) {
       VLOG(20) << "Skip Story <" << iter->story_id << "> due to duplication.";
+  //    LOG(INFO) << "Skip Story <" << iter->story_id << "> due to duplication." << ", signature = " << story_profile.signature;
       continue;
     }
     existence.insert(story_profile.signature);
     candidates.push_back(story_profile);
   }
+  LOG(INFO) << "RETRIVAL RESULT: total = " << retrieval_response.results.size();
+  LOG(INFO) << "CANDIDATE total = " << candidates.size();
+
   if (candidates.size() == 0) {
     LOG(WARNING) << "No candidate for ranking. uid=" << request.uid;
     _return.response_code = idl::RRC_NO_CANDIDATE;
@@ -141,7 +149,7 @@ void RecommEngineHandler::query(idl::RecommendationResponse& _return, const idl:
   char score_buffer[128];
   std::size_t num_final_results = std::min(static_cast<std::size_t>(request.topN), _return.results.size());
   _return.results.resize(num_final_results);
-  VLOG(20) << "Num of ranked results: [" << num_results << "], num of truncated results: [" << _return.results.size() << "]";
+  LOG(INFO) << "Num of ranked results: [" << num_results << "], num of truncated results: [" << _return.results.size() << "]";
   for (std::size_t i = 0; i < num_final_results; ++i) {
     snprintf(score_buffer, 128, "%lf", _return.results[i].score);
     result_list += _return.results[i].story_id + ':' + score_buffer + ',';
